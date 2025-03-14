@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billal Hossan - Flutter Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            padding: 50px 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1, h2, h3 {
+            color: #ffcc00;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #121212;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ffaa00;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">🚀 Billal Hossan - Flutter Developer</h1>
+        <p class="fade-in">Aspiring software developer with a passion for mobile app development.</p>
+        <h2 class="fade-in">📚 Education</h2>
+        <p class="fade-in">B.Sc. in Computer Science & Engineering - Dhaka International University</p>
+        
+        <h2 class="fade-in">💡 Skills & Technologies</h2>
+        <p class="fade-in">Flutter, Dart, C, C++, REST APIs, Firebase, SQLite, Git, GitHub</p>
+        
+        <h2 class="fade-in">📌 Projects</h2>
+        <p class="fade-in">E-commerce App, CRUD Operations, Authentication System</p>
+        
+        <h2 class="fade-in">🌐 Connect</h2>
+        <a href="mailto:bh302333@gmail.com" class="btn fade-in">Email</a>
+        <a href="https://www.linkedin.com/in/billal-hossan-92001b230" class="btn fade-in">LinkedIn</a>
+        <a href="https://github.com/billalhossan1" class="btn fade-in">GitHub</a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let elements = document.querySelectorAll(".fade-in");
+            function fadeInOnScroll() {
+                elements.forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+            window.addEventListener("scroll", fadeInOnScroll);
+            fadeInOnScroll();
+        });
+    </script>
+</body>
+</html>
